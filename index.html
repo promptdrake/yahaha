@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+	<title>Elite SMP</title>
+
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Quicksand:700" rel="stylesheet">
+
+	<!-- Font Awesome Icon -->
+	<link type="text/css" rel="stylesheet" href="css/font-awesome.min.css" />
+
+	<!-- Custom stlylesheet -->
+	<link type="text/css" rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+	<div id="notfound">
+		<div class="notfound">
+			<center>
+			<h2 style="max-width: 340px;">Bergabunglah ke<br> <font color="purple"><code><u>Elite Next Generation</u></code></font><br> Kami tunggu kehadiran anda disini :)</h2></center>
+			<button style="font-size: 20px;" id="ip">play.elitemc.me</button>
+            <input type="text" id="textip" value="play.elitemc.me" hidden>
+		</div>
+	</div>
+    <script>
+        // Get the button and input elements
+var myButton = document.getElementById("ip");
+var myInput = document.getElementById("textip");
+
+// Add a click event listener to the button
+myButton.addEventListener("click", function() {
+  // Detect if user is on Android device
+  if (navigator.userAgent.match(/Android/i)) {
+    window.location.href = "minecraft://?addExternalServer=Elite%20smp%20network|play.elitemc.me:19132";
+  }
+  // Otherwise, copy the text to the clipboard
+  else {
+    navigator.clipboard.writeText(myInput.value)
+      .then(function() {
+        alert("Text copied to clipboard!");
+      })
+      .catch(function() {
+        alert("Failed to copy text to clipboard");
+      });
+  }
+});
+
+    </script>
+</body>
+</html>
